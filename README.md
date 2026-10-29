@@ -1,4 +1,4 @@
-# PS4 WebKit Exploit (11.00 – 13.00)
+# PS4 WebKit Exploit (10.01, 11.00 – 13.00)
 
 A static WebKit exploit chain for the PlayStation 4. Everything runs in the
 console's browser, so any static web host will serve it.
@@ -7,12 +7,18 @@ Based on SLOPKIT by Jordy, originally written for the PS5. Our team ported it to
 PS4 and brought the `lapse` and `poops` kernel exploits onto it to cover
 firmware up to 13.00.
 
+The 10.01 block was derived offline from that firmware's own decrypted modules
+and kernel and has not been run on a console yet. Every value it carries is
+byte-checked on the console before anything is armed, so a wrong one stops the
+run instead of damaging anything.
+
 ## Firmware support
 
 The chain is selected automatically from the browser's User-Agent.
 
 | Firmware | Chain | Tested on hardware |
 | -------- | ----- | ------------------ |
+| 10.01 | lapse | No |
 | 11.00 | lapse | Yes |
 | 11.50 | lapse | Yes |
 | 12.00 | lapse | Yes |
